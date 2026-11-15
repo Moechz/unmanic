@@ -1,0 +1,195 @@
+# ===========================================================================
+# Multilingual file for the TOS 7 Docker application "unmanicdocker".
+# File name MUST be: <appid>.lang.  23-language superset (14 required by TOS).
+# The App Center picks the text matching the user's device language;
+# untranslated nodes fall back to English, which the official guide allows.
+# Fields: name (app title), auth (upstream author), descript (up to 512
+# chars), release_note, important (up to 512 chars).
+# Translations come from tosapp.json "translations"; run
+#   tosdocker lang <app>          to re-render this file
+#   tosdocker translate <app>     to see what still needs translating
+# ===========================================================================
+[en-us]
+name         = "Unmanic"
+auth         = "josh5"
+version      = "@@VERSION@@"
+descript     = "Unmanic is a library optimisation tool: point it at a folder of media, install the plugins you want (remux, convert to H.265, normalise audio, move subtitles), and it processes new files automatically with the bundled FFmpeg. A single container watches the library, runs the conversions in the background and keeps its configuration and history in the application data folder."
+release_note = "1. First release: Unmanic 0.4.1 from Docker Hub as a non-root container. Plugin-based media library optimisation with FFmpeg, watched library folder and configuration in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Mount your media into DockerAppData/unmanicdocker/library, open the UI and pick the plugins you need - the first run downloads the plugin repository from the internet. Conversions are CPU-heavy; schedule them for the night if the NAS is also used for streaming. History and settings live in .../config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[zh-cn]
+name         = "Unmanic"
+auth         = "josh5"
+version      = "@@VERSION@@"
+descript     = "Unmanic 是媒体库优化工具：指向一个媒体目录，装上需要的插件（重封装、转 H.265、音量标准化、字幕整理……），它就会用内置 FFmpeg 自动处理新文件。一个容器持续监视媒体库、后台转码，配置与历史都保存在应用数据目录。"
+release_note = "1. 首个版本：基于 Docker Hub 的 Unmanic 0.4.1，以非 root 容器运行。插件式媒体库优化，内置 FFmpeg，监视媒体目录；配置与历史保存在应用数据目录。"
+important    = "需要 DockerEngine（缺失时应用中心会自动安装）。把媒体挂到 DockerAppData/unmanicdocker/library，打开界面选择需要的插件——首次运行会联网下载插件仓库。转码很吃 CPU，NAS 同时还要串流的话建议安排在夜间。历史与设置保存在 .../config。界面为纯 HTTP，暴露到公网前请配置带 TLS 的反向代理。"
+
+[zh-hk]
+name         = "Unmanic"
+auth         = "josh5"
+version      = "@@VERSION@@"
+descript     = "Unmanic 是媒體庫優化工具：指向一個媒體目錄，裝上需要的插件（重新封裝、轉 H.265、音量標準化、字幕整理……），它就會用內建 FFmpeg 自動處理新檔案。一個容器持續監視媒體庫、後台轉碼，設定與歷史都保存在應用資料目錄。"
+release_note = "1. 首個版本：基於 Docker Hub 的 Unmanic 0.4.1，以非 root 容器運行。插件式媒體庫優化，內建 FFmpeg，監視媒體目錄；設定與歷史保存在應用資料目錄。"
+important    = "需要 DockerEngine（缺少時應用中心會自動安裝）。把媒體掛到 DockerAppData/unmanicdocker/library，開啟介面選擇需要的插件——首次執行會連網下載插件倉庫。轉碼很吃 CPU，NAS 同時還要串流的話建議安排在夜間。歷史與設定保存在 .../config。介面為純 HTTP，公開到互聯網前請配置帶 TLS 的反向代理。"
+
+[fr-fr]
+name         = "Unmanic"
+auth         = "josh5"
+version      = "@@VERSION@@"
+descript     = "Unmanic is a library optimisation tool: point it at a folder of media, install the plugins you want (remux, convert to H.265, normalise audio, move subtitles), and it processes new files automatically with the bundled FFmpeg. A single container watches the library, runs the conversions in the background and keeps its configuration and history in the application data folder."
+release_note = "1. First release: Unmanic 0.4.1 from Docker Hub as a non-root container. Plugin-based media library optimisation with FFmpeg, watched library folder and configuration in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Mount your media into DockerAppData/unmanicdocker/library, open the UI and pick the plugins you need - the first run downloads the plugin repository from the internet. Conversions are CPU-heavy; schedule them for the night if the NAS is also used for streaming. History and settings live in .../config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[de-de]
+name         = "Unmanic"
+auth         = "josh5"
+version      = "@@VERSION@@"
+descript     = "Unmanic is a library optimisation tool: point it at a folder of media, install the plugins you want (remux, convert to H.265, normalise audio, move subtitles), and it processes new files automatically with the bundled FFmpeg. A single container watches the library, runs the conversions in the background and keeps its configuration and history in the application data folder."
+release_note = "1. First release: Unmanic 0.4.1 from Docker Hub as a non-root container. Plugin-based media library optimisation with FFmpeg, watched library folder and configuration in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Mount your media into DockerAppData/unmanicdocker/library, open the UI and pick the plugins you need - the first run downloads the plugin repository from the internet. Conversions are CPU-heavy; schedule them for the night if the NAS is also used for streaming. History and settings live in .../config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[it-it]
+name         = "Unmanic"
+auth         = "josh5"
+version      = "@@VERSION@@"
+descript     = "Unmanic is a library optimisation tool: point it at a folder of media, install the plugins you want (remux, convert to H.265, normalise audio, move subtitles), and it processes new files automatically with the bundled FFmpeg. A single container watches the library, runs the conversions in the background and keeps its configuration and history in the application data folder."
+release_note = "1. First release: Unmanic 0.4.1 from Docker Hub as a non-root container. Plugin-based media library optimisation with FFmpeg, watched library folder and configuration in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Mount your media into DockerAppData/unmanicdocker/library, open the UI and pick the plugins you need - the first run downloads the plugin repository from the internet. Conversions are CPU-heavy; schedule them for the night if the NAS is also used for streaming. History and settings live in .../config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[es-es]
+name         = "Unmanic"
+auth         = "josh5"
+version      = "@@VERSION@@"
+descript     = "Unmanic is a library optimisation tool: point it at a folder of media, install the plugins you want (remux, convert to H.265, normalise audio, move subtitles), and it processes new files automatically with the bundled FFmpeg. A single container watches the library, runs the conversions in the background and keeps its configuration and history in the application data folder."
+release_note = "1. First release: Unmanic 0.4.1 from Docker Hub as a non-root container. Plugin-based media library optimisation with FFmpeg, watched library folder and configuration in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Mount your media into DockerAppData/unmanicdocker/library, open the UI and pick the plugins you need - the first run downloads the plugin repository from the internet. Conversions are CPU-heavy; schedule them for the night if the NAS is also used for streaming. History and settings live in .../config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[hu-hu]
+name         = "Unmanic"
+auth         = "josh5"
+version      = "@@VERSION@@"
+descript     = "Unmanic is a library optimisation tool: point it at a folder of media, install the plugins you want (remux, convert to H.265, normalise audio, move subtitles), and it processes new files automatically with the bundled FFmpeg. A single container watches the library, runs the conversions in the background and keeps its configuration and history in the application data folder."
+release_note = "1. First release: Unmanic 0.4.1 from Docker Hub as a non-root container. Plugin-based media library optimisation with FFmpeg, watched library folder and configuration in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Mount your media into DockerAppData/unmanicdocker/library, open the UI and pick the plugins you need - the first run downloads the plugin repository from the internet. Conversions are CPU-heavy; schedule them for the night if the NAS is also used for streaming. History and settings live in .../config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[ja-jp]
+name         = "Unmanic"
+auth         = "josh5"
+version      = "@@VERSION@@"
+descript     = "Unmanic is a library optimisation tool: point it at a folder of media, install the plugins you want (remux, convert to H.265, normalise audio, move subtitles), and it processes new files automatically with the bundled FFmpeg. A single container watches the library, runs the conversions in the background and keeps its configuration and history in the application data folder."
+release_note = "1. First release: Unmanic 0.4.1 from Docker Hub as a non-root container. Plugin-based media library optimisation with FFmpeg, watched library folder and configuration in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Mount your media into DockerAppData/unmanicdocker/library, open the UI and pick the plugins you need - the first run downloads the plugin repository from the internet. Conversions are CPU-heavy; schedule them for the night if the NAS is also used for streaming. History and settings live in .../config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[ko-kr]
+name         = "Unmanic"
+auth         = "josh5"
+version      = "@@VERSION@@"
+descript     = "Unmanic is a library optimisation tool: point it at a folder of media, install the plugins you want (remux, convert to H.265, normalise audio, move subtitles), and it processes new files automatically with the bundled FFmpeg. A single container watches the library, runs the conversions in the background and keeps its configuration and history in the application data folder."
+release_note = "1. First release: Unmanic 0.4.1 from Docker Hub as a non-root container. Plugin-based media library optimisation with FFmpeg, watched library folder and configuration in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Mount your media into DockerAppData/unmanicdocker/library, open the UI and pick the plugins you need - the first run downloads the plugin repository from the internet. Conversions are CPU-heavy; schedule them for the night if the NAS is also used for streaming. History and settings live in .../config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[pl-pl]
+name         = "Unmanic"
+auth         = "josh5"
+version      = "@@VERSION@@"
+descript     = "Unmanic is a library optimisation tool: point it at a folder of media, install the plugins you want (remux, convert to H.265, normalise audio, move subtitles), and it processes new files automatically with the bundled FFmpeg. A single container watches the library, runs the conversions in the background and keeps its configuration and history in the application data folder."
+release_note = "1. First release: Unmanic 0.4.1 from Docker Hub as a non-root container. Plugin-based media library optimisation with FFmpeg, watched library folder and configuration in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Mount your media into DockerAppData/unmanicdocker/library, open the UI and pick the plugins you need - the first run downloads the plugin repository from the internet. Conversions are CPU-heavy; schedule them for the night if the NAS is also used for streaming. History and settings live in .../config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[ru-ru]
+name         = "Unmanic"
+auth         = "josh5"
+version      = "@@VERSION@@"
+descript     = "Unmanic is a library optimisation tool: point it at a folder of media, install the plugins you want (remux, convert to H.265, normalise audio, move subtitles), and it processes new files automatically with the bundled FFmpeg. A single container watches the library, runs the conversions in the background and keeps its configuration and history in the application data folder."
+release_note = "1. First release: Unmanic 0.4.1 from Docker Hub as a non-root container. Plugin-based media library optimisation with FFmpeg, watched library folder and configuration in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Mount your media into DockerAppData/unmanicdocker/library, open the UI and pick the plugins you need - the first run downloads the plugin repository from the internet. Conversions are CPU-heavy; schedule them for the night if the NAS is also used for streaming. History and settings live in .../config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[tr-tr]
+name         = "Unmanic"
+auth         = "josh5"
+version      = "@@VERSION@@"
+descript     = "Unmanic is a library optimisation tool: point it at a folder of media, install the plugins you want (remux, convert to H.265, normalise audio, move subtitles), and it processes new files automatically with the bundled FFmpeg. A single container watches the library, runs the conversions in the background and keeps its configuration and history in the application data folder."
+release_note = "1. First release: Unmanic 0.4.1 from Docker Hub as a non-root container. Plugin-based media library optimisation with FFmpeg, watched library folder and configuration in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Mount your media into DockerAppData/unmanicdocker/library, open the UI and pick the plugins you need - the first run downloads the plugin repository from the internet. Conversions are CPU-heavy; schedule them for the night if the NAS is also used for streaming. History and settings live in .../config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[pt-pt]
+name         = "Unmanic"
+auth         = "josh5"
+version      = "@@VERSION@@"
+descript     = "Unmanic is a library optimisation tool: point it at a folder of media, install the plugins you want (remux, convert to H.265, normalise audio, move subtitles), and it processes new files automatically with the bundled FFmpeg. A single container watches the library, runs the conversions in the background and keeps its configuration and history in the application data folder."
+release_note = "1. First release: Unmanic 0.4.1 from Docker Hub as a non-root container. Plugin-based media library optimisation with FFmpeg, watched library folder and configuration in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Mount your media into DockerAppData/unmanicdocker/library, open the UI and pick the plugins you need - the first run downloads the plugin repository from the internet. Conversions are CPU-heavy; schedule them for the night if the NAS is also used for streaming. History and settings live in .../config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[ar-sa]
+name         = "Unmanic"
+auth         = "josh5"
+version      = "@@VERSION@@"
+descript     = "Unmanic is a library optimisation tool: point it at a folder of media, install the plugins you want (remux, convert to H.265, normalise audio, move subtitles), and it processes new files automatically with the bundled FFmpeg. A single container watches the library, runs the conversions in the background and keeps its configuration and history in the application data folder."
+release_note = "1. First release: Unmanic 0.4.1 from Docker Hub as a non-root container. Plugin-based media library optimisation with FFmpeg, watched library folder and configuration in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Mount your media into DockerAppData/unmanicdocker/library, open the UI and pick the plugins you need - the first run downloads the plugin repository from the internet. Conversions are CPU-heavy; schedule them for the night if the NAS is also used for streaming. History and settings live in .../config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[cs-cz]
+name         = "Unmanic"
+auth         = "josh5"
+version      = "@@VERSION@@"
+descript     = "Unmanic is a library optimisation tool: point it at a folder of media, install the plugins you want (remux, convert to H.265, normalise audio, move subtitles), and it processes new files automatically with the bundled FFmpeg. A single container watches the library, runs the conversions in the background and keeps its configuration and history in the application data folder."
+release_note = "1. First release: Unmanic 0.4.1 from Docker Hub as a non-root container. Plugin-based media library optimisation with FFmpeg, watched library folder and configuration in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Mount your media into DockerAppData/unmanicdocker/library, open the UI and pick the plugins you need - the first run downloads the plugin repository from the internet. Conversions are CPU-heavy; schedule them for the night if the NAS is also used for streaming. History and settings live in .../config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[he-il]
+name         = "Unmanic"
+auth         = "josh5"
+version      = "@@VERSION@@"
+descript     = "Unmanic is a library optimisation tool: point it at a folder of media, install the plugins you want (remux, convert to H.265, normalise audio, move subtitles), and it processes new files automatically with the bundled FFmpeg. A single container watches the library, runs the conversions in the background and keeps its configuration and history in the application data folder."
+release_note = "1. First release: Unmanic 0.4.1 from Docker Hub as a non-root container. Plugin-based media library optimisation with FFmpeg, watched library folder and configuration in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Mount your media into DockerAppData/unmanicdocker/library, open the UI and pick the plugins you need - the first run downloads the plugin repository from the internet. Conversions are CPU-heavy; schedule them for the night if the NAS is also used for streaming. History and settings live in .../config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[id-id]
+name         = "Unmanic"
+auth         = "josh5"
+version      = "@@VERSION@@"
+descript     = "Unmanic is a library optimisation tool: point it at a folder of media, install the plugins you want (remux, convert to H.265, normalise audio, move subtitles), and it processes new files automatically with the bundled FFmpeg. A single container watches the library, runs the conversions in the background and keeps its configuration and history in the application data folder."
+release_note = "1. First release: Unmanic 0.4.1 from Docker Hub as a non-root container. Plugin-based media library optimisation with FFmpeg, watched library folder and configuration in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Mount your media into DockerAppData/unmanicdocker/library, open the UI and pick the plugins you need - the first run downloads the plugin repository from the internet. Conversions are CPU-heavy; schedule them for the night if the NAS is also used for streaming. History and settings live in .../config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[nb-no]
+name         = "Unmanic"
+auth         = "josh5"
+version      = "@@VERSION@@"
+descript     = "Unmanic is a library optimisation tool: point it at a folder of media, install the plugins you want (remux, convert to H.265, normalise audio, move subtitles), and it processes new files automatically with the bundled FFmpeg. A single container watches the library, runs the conversions in the background and keeps its configuration and history in the application data folder."
+release_note = "1. First release: Unmanic 0.4.1 from Docker Hub as a non-root container. Plugin-based media library optimisation with FFmpeg, watched library folder and configuration in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Mount your media into DockerAppData/unmanicdocker/library, open the UI and pick the plugins you need - the first run downloads the plugin repository from the internet. Conversions are CPU-heavy; schedule them for the night if the NAS is also used for streaming. History and settings live in .../config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[nl-nl]
+name         = "Unmanic"
+auth         = "josh5"
+version      = "@@VERSION@@"
+descript     = "Unmanic is a library optimisation tool: point it at a folder of media, install the plugins you want (remux, convert to H.265, normalise audio, move subtitles), and it processes new files automatically with the bundled FFmpeg. A single container watches the library, runs the conversions in the background and keeps its configuration and history in the application data folder."
+release_note = "1. First release: Unmanic 0.4.1 from Docker Hub as a non-root container. Plugin-based media library optimisation with FFmpeg, watched library folder and configuration in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Mount your media into DockerAppData/unmanicdocker/library, open the UI and pick the plugins you need - the first run downloads the plugin repository from the internet. Conversions are CPU-heavy; schedule them for the night if the NAS is also used for streaming. History and settings live in .../config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[sv-se]
+name         = "Unmanic"
+auth         = "josh5"
+version      = "@@VERSION@@"
+descript     = "Unmanic is a library optimisation tool: point it at a folder of media, install the plugins you want (remux, convert to H.265, normalise audio, move subtitles), and it processes new files automatically with the bundled FFmpeg. A single container watches the library, runs the conversions in the background and keeps its configuration and history in the application data folder."
+release_note = "1. First release: Unmanic 0.4.1 from Docker Hub as a non-root container. Plugin-based media library optimisation with FFmpeg, watched library folder and configuration in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Mount your media into DockerAppData/unmanicdocker/library, open the UI and pick the plugins you need - the first run downloads the plugin repository from the internet. Conversions are CPU-heavy; schedule them for the night if the NAS is also used for streaming. History and settings live in .../config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[th-th]
+name         = "Unmanic"
+auth         = "josh5"
+version      = "@@VERSION@@"
+descript     = "Unmanic is a library optimisation tool: point it at a folder of media, install the plugins you want (remux, convert to H.265, normalise audio, move subtitles), and it processes new files automatically with the bundled FFmpeg. A single container watches the library, runs the conversions in the background and keeps its configuration and history in the application data folder."
+release_note = "1. First release: Unmanic 0.4.1 from Docker Hub as a non-root container. Plugin-based media library optimisation with FFmpeg, watched library folder and configuration in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Mount your media into DockerAppData/unmanicdocker/library, open the UI and pick the plugins you need - the first run downloads the plugin repository from the internet. Conversions are CPU-heavy; schedule them for the night if the NAS is also used for streaming. History and settings live in .../config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[vi-vn]
+name         = "Unmanic"
+auth         = "josh5"
+version      = "@@VERSION@@"
+descript     = "Unmanic is a library optimisation tool: point it at a folder of media, install the plugins you want (remux, convert to H.265, normalise audio, move subtitles), and it processes new files automatically with the bundled FFmpeg. A single container watches the library, runs the conversions in the background and keeps its configuration and history in the application data folder."
+release_note = "1. First release: Unmanic 0.4.1 from Docker Hub as a non-root container. Plugin-based media library optimisation with FFmpeg, watched library folder and configuration in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Mount your media into DockerAppData/unmanicdocker/library, open the UI and pick the plugins you need - the first run downloads the plugin repository from the internet. Conversions are CPU-heavy; schedule them for the night if the NAS is also used for streaming. History and settings live in .../config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+

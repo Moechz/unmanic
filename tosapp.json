@@ -1,0 +1,111 @@
+{
+  "app_id": "unmanicdocker",
+  "title": "Unmanic",
+  "image": "josh5/unmanic:0.4.1",
+  "repo_name": "unmanic",
+  "mode": "plain",
+  "container_port": 8888,
+  "category": [
+    "Audio_Video_Entertainment"
+  ],
+  "volumes": [
+    {
+      "host": "/Volume1/DockerAppData/unmanicdocker/config",
+      "container": "/config"
+    },
+    {
+      "host": "/Volume1/DockerAppData/unmanicdocker/library",
+      "container": "/library"
+    }
+  ],
+  "env": {
+    "TZ": "Asia/Shanghai"
+  },
+  "auth": "josh5",
+  "upstream_url": "https://github.com/Unmanic/unmanic",
+  "upstream_license": "GPL-3.0",
+  "descript": "Unmanic is a library optimisation tool: point it at a folder of media, install the plugins you want (remux, convert to H.265, normalise audio, move subtitles), and it processes new files automatically with the bundled FFmpeg. A single container watches the library, runs the conversions in the background and keeps its configuration and history in the application data folder.",
+  "release_note": "1. First release: Unmanic 0.4.1 from Docker Hub as a non-root container. Plugin-based media library optimisation with FFmpeg, watched library folder and configuration in the application data folder.",
+  "important": "Requires DockerEngine (installed automatically if missing). Mount your media into DockerAppData/unmanicdocker/library, open the UI and pick the plugins you need - the first run downloads the plugin repository from the internet. Conversions are CPU-heavy; schedule them for the night if the NAS is also used for streaming. History and settings live in .../config. Plain HTTP; use a TLS reverse proxy before exposing it to the internet.",
+  "probe": {
+    "user_in_image": "(root)",
+    "entrypoint": [
+      "/entrypoint.sh"
+    ],
+    "cmd": [
+      "/usr/bin/unmanic"
+    ],
+    "exposed_ports": [
+      8888
+    ],
+    "declared_volumes": [],
+    "image_healthcheck": [],
+    "digest": "josh5/unmanic@sha256:36a705923193db6b8ca7abd5b57b81a7309d04aedd320ec0ef4e9ac5970be885",
+    "architecture": "x86_64",
+    "platforms": [
+      "x86_64",
+      "aarch64"
+    ],
+    "http_client_in_image": "curl",
+    "trial_run": {
+      "ok": true,
+      "http_code": "301",
+      "state": "running",
+      "paths": [
+        "/config"
+      ],
+      "host_port": 18000,
+      "log_tail": "**** (entrypoint) Activating virtualenv at /opt/venv\n**** (entrypoint) Sourcing /etc/cont-init.d/01-clear-legacy-log-buffers\n**** (legacy-log-cleanup) No log buffer directory at /config/.unmanic/logs/buffer; skipping legacy cleanup\n**** (entrypoint) Sourcing /etc/cont-init.d/10-init-user\n**** (init-user) Not running as root, skipping UID/GID adjustments ****\n───────────────────────────────────────\nUser: ubuntu\nUser UID:    1000\nUser GID:    1000\n───────────────────────────────────────\n**** (entrypoint) Sourcing /etc/cont-init.d/20-permission-config\n**** (permission-config) Not running as root, skipping ownership and device permission changes ****\n**** (entrypoint) Sourcing /etc/cont-init.d/30-patch-nvidia\n**** (entrypoint) Sourcing /etc/cont-init.d/60-custom-setup-script\n**** (entrypoint) SQLite maintenance skipped (db not found at /config/.unmanic/config/unmanic.db)\n**** (entrypoint) Starting: /usr/bin/unmanic\nNot running as root, starting Unmanic without changing user\n2026-11-15T01:01:36:INFO:Unmanic.UnmanicLogging - Initialising file logger. All further logs should output to the 'unmanic.log' file",
+      "files_in_mounts": ""
+    },
+    "docker_hub": {},
+    "github": {
+      "owner": "Unmanic",
+      "repo": "unmanic",
+      "description": "Unmanic - Library Optimiser",
+      "license": "GPL-3.0",
+      "homepage": ""
+    }
+  },
+  "healthcheck": [
+    "CMD-SHELL",
+    "curl -s -o /dev/null http://127.0.0.1:8888/ || exit 1"
+  ],
+  "platform": "x86_64",
+  "user": "1000:1000",
+  "publisher": "Moechz",
+  "compose_project": "unmanicdocker",
+  "github_repo": "unmanic",
+  "upstream_version": "0.4.1",
+  "release_tag_prefix": "v",
+  "version": "0.4.1-1",
+  "help": "https://github.com/Moechz/unmanic/issues",
+  "official": "https://github.com/Unmanic/unmanic",
+  "license": "GPL-3.0",
+  "docker_socket": false,
+  "group_add": [],
+  "healthcheck_start_period": "60s",
+  "translations": {
+    "zh-cn": {
+      "descript": "Unmanic 是媒体库优化工具：指向一个媒体目录，装上需要的插件（重封装、转 H.265、音量标准化、字幕整理……），它就会用内置 FFmpeg 自动处理新文件。一个容器持续监视媒体库、后台转码，配置与历史都保存在应用数据目录。",
+      "important": "需要 DockerEngine（缺失时应用中心会自动安装）。把媒体挂到 DockerAppData/unmanicdocker/library，打开界面选择需要的插件——首次运行会联网下载插件仓库。转码很吃 CPU，NAS 同时还要串流的话建议安排在夜间。历史与设置保存在 .../config。界面为纯 HTTP，暴露到公网前请配置带 TLS 的反向代理。",
+      "release_note": "1. 首个版本：基于 Docker Hub 的 Unmanic 0.4.1，以非 root 容器运行。插件式媒体库优化，内置 FFmpeg，监视媒体目录；配置与历史保存在应用数据目录。"
+    },
+    "zh-hk": {
+      "descript": "Unmanic 是媒體庫優化工具：指向一個媒體目錄，裝上需要的插件（重新封裝、轉 H.265、音量標準化、字幕整理……），它就會用內建 FFmpeg 自動處理新檔案。一個容器持續監視媒體庫、後台轉碼，設定與歷史都保存在應用資料目錄。",
+      "important": "需要 DockerEngine（缺少時應用中心會自動安裝）。把媒體掛到 DockerAppData/unmanicdocker/library，開啟介面選擇需要的插件——首次執行會連網下載插件倉庫。轉碼很吃 CPU，NAS 同時還要串流的話建議安排在夜間。歷史與設定保存在 .../config。介面為純 HTTP，公開到互聯網前請配置帶 TLS 的反向代理。",
+      "release_note": "1. 首個版本：基於 Docker Hub 的 Unmanic 0.4.1，以非 root 容器運行。插件式媒體庫優化，內建 FFmpeg，監視媒體目錄；設定與歷史保存在應用資料目錄。"
+    }
+  },
+  "data_notes": "`/config` keeps the Unmanic database, plugins and logs; `/library` (mounted from `.../library`) is the media folder it scans and rewrites.",
+  "design_notes": [
+    "**Runs as uid 1000.** The entrypoint detects a non-root start and skips its own user switch.",
+    "**FFmpeg inside the image.** No host dependencies; conversions use the bundled binaries."
+  ],
+  "limitations": [
+    "- Conversions are CPU-heavy and can take hours on 4K files.",
+    "- The plugin repository is downloaded from the internet on first start.",
+    "- The UI is plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+  ],
+  "host_port": 8140
+}
